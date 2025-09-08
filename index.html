@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng nhập</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: url("photo-1752694909919-77e24bb29e4f.avif") no-repeat
+          center center fixed;
+        background-size: cover; /* GIF phủ toàn màn hình */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-box {
+        padding: 40px; /* khoảng cách bên trong hộp */
+        background: #fff; /* nền trắng cho hộp đăng nhập */
+        border-radius: 15px; /* bo tròn góc hộp */
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* đổ bóng cho hộp */
+        width: 300px; /* chiều rộng hộp đăng nhập */
+        text-align: center; /* căn chữ giữa */
+        animation: fadeIn 1s ease; /* hiệu ứng mờ dần khi xuất hiện */
+      }
+
+      .login-box h2 {
+        margin-bottom: 10px; /* khoảng cách dưới tiêu đề */
+        color: #cc2727; /* màu đỏ tươi cho chữ "Đăng nhập" */
+        font-size: 25px; /* cỡ chữ lớn */
+      }
+
+      .input-box {
+        margin-bottom: 15px; /* khoảng cách giữa các ô nhập */
+      }
+
+      .input-box input {
+        width: 90%; /* input chiếm toàn chiều ngang hộp */
+        padding: 12px 15px; /* khoảng cách trong input */
+        border: 2px solid #c40c18; /* viền đỏ */
+        border-radius: 50px; /* bo tròn ô nhập */
+        outline: none; /* bỏ viền xanh mặc định khi bấm vào */
+        font-size: 15px; /* cỡ chữ nhập vào */
+        transition: 0.3s; /* hiệu ứng mượt khi đổi màu */
+      }
+
+      .input-box input:focus {
+        border-color: #4a1adb; /* viền đậm hơn khi bấm vào */
+        box-shadow: 0 0 6px rgba(12, 86, 235, 0.6); /* viền đỏ sáng nhẹ */
+      }
+
+      .btn {
+        width: 100%; /* nút rộng bằng input */
+        padding: 12px; /* khoảng cách trong nút */
+        background: #bb1313; /* nền đỏ nút */
+        border: none; /* bỏ viền mặc định */
+        border-radius: 50px; /* bo tròn nút */
+        color: #fff; /* chữ trắng */
+        font-size: 16px; /* chữ to hơn một chút */
+        cursor: pointer; /* hiện bàn tay khi hover */
+        transition: 0.3s; /* hiệu ứng mượt */
+      }
+
+      .btn:hover {
+        background: #4518cc; /* khi hover chuyển màu đỏ đậm */
+      }
+
+      .links {
+        margin-top: 10px; /* khoảng cách trên các link */
+        font-size: 14px; /* chữ nhỏ hơn */
+      }
+
+      .links a {
+        color: #d62828; /* màu đỏ cho link */
+        text-decoration: none; /* bỏ gạch dưới */
+        transition: 0.3s; /* hiệu ứng mượt */
+      }
+
+      .links a:hover {
+        text-decoration: underline; /* khi hover có gạch dưới */
+      }
+
+      /* Hiệu ứng xuất hiện */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        } /* ban đầu mờ + trượt lên */
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        } /* dần hiện rõ */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box">
+      <h2>Đăng nhập</h2>
+      <form>
+        <div class="input-box">
+          <input type="text" placeholder="Tên đăng nhập" required />
+          <!-- ô nhập tên -->
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Mật khẩu" required />
+          <!-- ô nhập mật khẩu -->
+        </div>
+        <button type="submit" class="btn">Đăng nhập</button>
+        <!-- nút login -->
+      </form>
+      <div class="links">
+        <p><a href="#">Quên mật khẩu?</a></p>
+        <p>Chưa có tài khoản? <a href="#">Đăng ký</a></p>
+      </div>
+    </div>
+  </body>
+</html>
